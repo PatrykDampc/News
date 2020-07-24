@@ -18,18 +18,18 @@ class ApiClient {
         let response: URLResponse
     }
     
-    func request<T: Decodable>(for path: String) -> AnyPublisher<Response<T>, Error> {
+    func request<T: Decodable>(for path: String, queryItems: URLQueryItem...) -> AnyPublisher<Response<T>, Error> {
         guard var components = URLComponents(url: baseUrl.appendingPathComponent(path), resolvingAgainstBaseURL: true)
             else { fatalError("Couldn't create URLComponents") }
         
         components.queryItems = [
            URLQueryItem(name: "apiKey", value: "949ebb09cdf940f79df81fa9fc94f831"),
            URLQueryItem(name: "country", value: "us")
-        ]
+        ] + queryItems
         
         let request = URLRequest(url: components.url!)
         
-        print("URL: \(components.url)")
+        print("URL: \(String(describing: components.url))")
         return URLSession.shared
             .dataTaskPublisher(for: request)
             .tryMap { result -> Response<T> in
