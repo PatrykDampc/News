@@ -17,6 +17,11 @@
 		5E4B4ED124C72ED100003BEB /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B4ED024C72ED100003BEB /* Articles.swift */; };
 		5E4B4ED524C72EF200003BEB /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B4ED324C72EF200003BEB /* ApiClient.swift */; };
 		5E4B4ED624C72EF200003BEB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B4ED424C72EF200003BEB /* ApiService.swift */; };
+		5E725FC224CDB77F007ECBC4 /* ArticleHeaderTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725FC124CDB77F007ECBC4 /* ArticleHeaderTile.swift */; };
+		5E725FC424CDEFA9007ECBC4 /* GeometryReaderTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725FC324CDEFA9007ECBC4 /* GeometryReaderTools.swift */; };
+		5E725FC624CDF4BA007ECBC4 /* VerticalCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725FC524CDF4BA007ECBC4 /* VerticalCarousel.swift */; };
+		5E725FC924CDF7EF007ECBC4 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725FC824CDF7EF007ECBC4 /* CategoryModel.swift */; };
+		5E725FCB24CE02DC007ECBC4 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725FCA24CE02DC007ECBC4 /* Blur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		5E4B4ED024C72ED100003BEB /* Articles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		5E4B4ED324C72EF200003BEB /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5E4B4ED424C72EF200003BEB /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		5E725FC124CDB77F007ECBC4 /* ArticleHeaderTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleHeaderTile.swift; sourceTree = "<group>"; };
+		5E725FC324CDEFA9007ECBC4 /* GeometryReaderTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTools.swift; sourceTree = "<group>"; };
+		5E725FC524CDF4BA007ECBC4 /* VerticalCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCarousel.swift; sourceTree = "<group>"; };
+		5E725FC824CDF7EF007ECBC4 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		5E725FCA24CE02DC007ECBC4 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +115,12 @@
 		5E4B4ECC24C72EA900003BEB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E725FC724CDF7DE007ECBC4 /* model */,
 				5E4B4ECD24C72EB800003BEB /* Home.swift */,
+				5E725FC124CDB77F007ECBC4 /* ArticleHeaderTile.swift */,
+				5E725FC324CDEFA9007ECBC4 /* GeometryReaderTools.swift */,
+				5E725FC524CDF4BA007ECBC4 /* VerticalCarousel.swift */,
+				5E725FCA24CE02DC007ECBC4 /* Blur.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +140,14 @@
 				5E4B4ED324C72EF200003BEB /* ApiClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		5E725FC724CDF7DE007ECBC4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5E725FC824CDF7EF007ECBC4 /* CategoryModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,10 +222,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E4B4EB524C72DD200003BEB /* AppDelegate.swift in Sources */,
+				5E725FC624CDF4BA007ECBC4 /* VerticalCarousel.swift in Sources */,
+				5E725FC424CDEFA9007ECBC4 /* GeometryReaderTools.swift in Sources */,
 				5E4B4ECB24C72E9E00003BEB /* HomeViewModel.swift in Sources */,
 				5E4B4ED124C72ED100003BEB /* Articles.swift in Sources */,
 				5E4B4ECE24C72EB800003BEB /* Home.swift in Sources */,
+				5E725FCB24CE02DC007ECBC4 /* Blur.swift in Sources */,
 				5E4B4EB724C72DD200003BEB /* SceneDelegate.swift in Sources */,
+				5E725FC924CDF7EF007ECBC4 /* CategoryModel.swift in Sources */,
+				5E725FC224CDB77F007ECBC4 /* ArticleHeaderTile.swift in Sources */,
 				5E4B4ED624C72EF200003BEB /* ApiService.swift in Sources */,
 				5E4B4ED524C72EF200003BEB /* ApiClient.swift in Sources */,
 			);

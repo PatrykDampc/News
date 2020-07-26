@@ -1,6 +1,4 @@
 //
-//  ApiClient.swift
-//  Breaking Bad Wiki
 //
 //  Created by Patryk Dampc on 19/07/2020.
 //  Copyright © 2020 Patryk Dampc. All rights reserved.
