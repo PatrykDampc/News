@@ -25,9 +25,17 @@ struct Home: View {
     
     func articles(articles: [Article],topOffset: CGFloat) -> some View {
         GeometryReader { rootGeometry in
-            ScrollView(.vertical) {
+            ScrollView(.vertical,  showsIndicators: false) {
                 ForEach(viewModel.articles) { item in
-                    ArticleHeaderTile(article: item, parentFrame: rootGeometry.frame(in: .global), topOffset: topOffset)
+                    
+                    NavigationLink(destination: Text("Dupa")) {
+                        
+                        ArticleHeaderTile(
+                            article: item,
+                            parentFrame: rootGeometry.frame(in: .global),
+                            topOffset: topOffset
+                        )
+                    }
                 }
                 .padding(.top,topOffset)
             }
@@ -39,10 +47,13 @@ struct Home: View {
             VStack{
                 VStack{
                     HStack{
+                        
                         Text("News")
                             .font(.system(size: 40, weight: Font.Weight.regular, design: .default))
                             .padding(.top,geometry.safeAreaInsets.top)
                             .padding()
+                        
+                        
                         Spacer()
                     }
                     VerticalCarousel(items: viewModel.categories) { category in
@@ -64,6 +75,9 @@ struct Home: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        Group {
+            Home()
+            Home()
+        }
     }
 }
