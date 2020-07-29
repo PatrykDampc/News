@@ -45,7 +45,7 @@ struct ArticleHeaderTile: View {
     
    private func calculateRotationDegree(for position: CGRect, root: CGRect, topOffset: CGFloat) -> Double {
         if position.minY < root.minY + topOffset {
-            let calculatedFromPosition = abs(Double(0 - ((root.minY + topOffset) - position.minY))) * 0.2
+            let calculatedFromPosition = abs(Double(0 - ((root.minY + topOffset) - position.minY))) * 0.1
             if calculatedFromPosition < 90 {
                 return calculatedFromPosition
             } else{

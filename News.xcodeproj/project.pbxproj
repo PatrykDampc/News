@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3B60F224D0B92B009C49CE /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B60F124D0B92B009C49CE /* ArticleView.swift */; };
 		5E4B4EB524C72DD200003BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B4EB424C72DD200003BEB /* AppDelegate.swift */; };
 		5E4B4EB724C72DD200003BEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B4EB624C72DD200003BEB /* SceneDelegate.swift */; };
 		5E4B4EBB24C72DD400003BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B4EBA24C72DD400003BEB /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E3B60F124D0B92B009C49CE /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		5E4B4EB124C72DD200003BEB /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4B4EB424C72DD200003BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E4B4EB624C72DD200003BEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				5E725FC324CDEFA9007ECBC4 /* GeometryReaderTools.swift */,
 				5E725FC524CDF4BA007ECBC4 /* VerticalCarousel.swift */,
 				5E725FCA24CE02DC007ECBC4 /* Blur.swift */,
+				5E3B60F124D0B92B009C49CE /* ArticleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				5E725FC924CDF7EF007ECBC4 /* CategoryModel.swift in Sources */,
 				5E725FC224CDB77F007ECBC4 /* ArticleHeaderTile.swift in Sources */,
 				5E4B4ED624C72EF200003BEB /* ApiService.swift in Sources */,
+				5E3B60F224D0B92B009C49CE /* ArticleView.swift in Sources */,
 				5E4B4ED524C72EF200003BEB /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

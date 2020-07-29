@@ -10,15 +10,36 @@ import SwiftUI
 
 struct Home: View {
     
+    init() {
+        UINavigationBar.appearance().barTintColor = .blue
+        UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().shadowImage = UIImage()
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 30,weight: UIFont.Weight.bold),
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.paragraphStyle: paragraphStyle
+        ]
+        
+    }
+    
     @ObservedObject var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
             ZStack {
-                articles(articles: viewModel.articles, topOffset: 200).layoutPriority(1)
+                articles(articles: viewModel.articles, topOffset: 100).layoutPriority(1)
                 header(categories: viewModel.categories)
-            }.navigationBarTitle("")
-            .navigationBarHidden(true)
+            }
+            .background(
+                LinearGradient(gradient: Gradient(colors: [Color.blue, Color.gray]), startPoint: .bottom, endPoint: .top).ignoresSafeArea()
+            )
+            .navigationTitle("News")
+            .navigationBarTitleDisplayMode(.large)
             
         }
     }
@@ -28,7 +49,9 @@ struct Home: View {
             ScrollView(.vertical,  showsIndicators: false) {
                 ForEach(viewModel.articles) { item in
                     
-                    NavigationLink(destination: Text("Dupa")) {
+                    NavigationLink(
+                        destination: ArticleView()
+                    ) {
                         
                         ArticleHeaderTile(
                             article: item,
@@ -44,31 +67,16 @@ struct Home: View {
     
     func header(categories: [CategoryModel]) -> some View {
         GeometryReader { geometry in
-            VStack{
-                VStack{
-                    HStack{
-                        
-                        Text("News")
-                            .font(.system(size: 40, weight: Font.Weight.regular, design: .default))
-                            .padding(.top,geometry.safeAreaInsets.top)
-                            .padding()
-                        
-                        
-                        Spacer()
-                    }
-                    VerticalCarousel(items: viewModel.categories) { category in
-                        Text(category.name)
-                            .font(.system(size: 20, design: .default))
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .background(Color.blue)
-                    }
-                    .layoutPriority(1)
+                VerticalCarousel(items: viewModel.categories) { category in
+                    Text(category.name)
+                        .font(.system(size: 20, design: .default))
+                        .foregroundColor(Color.white)
+                        .padding(10)
+                        .background(Color.blue)
                 }
+                .padding(.top,geometry.safeAreaInsets.top)
                 .background(Blur(style: .regular))
                 .edgesIgnoringSafeArea(.top)
-                Spacer()
-            }
         }
     }
 }
@@ -76,7 +84,6 @@ struct Home: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            Home()
             Home()
         }
     }
